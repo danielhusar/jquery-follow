@@ -9,6 +9,8 @@
     settings: {
       start: null,
       end: null,
+      startOffset: 40,
+      endOffset: 100,
       $wrapper: $('[data-follow]'),
       $main: $('main'),
       $body: $('body')
@@ -23,8 +25,8 @@
     // Calculate banner settings
     calculateSettings: function () {
       follow.settings.$wrapper.css('width', follow.settings.$wrapper.parent().width() + 'px' );
-      follow.settings.start = follow.settings.$wrapper.offset().top - 40;
-      follow.settings.end = follow.settings.$main.offset().top + follow.settings.$main.outerHeight() - follow.settings.$wrapper.outerHeight() - 100;
+      follow.settings.start = follow.settings.$wrapper.offset().top - startOffset;
+      follow.settings.end = follow.settings.$main.offset().top + follow.settings.$main.outerHeight() - follow.settings.$wrapper.outerHeight() - endOffset;
     },
 
     /**
