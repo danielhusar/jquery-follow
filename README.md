@@ -1,3 +1,8 @@
 ## jquery-follow
 
-  Sidebat that will follow the user view
+  Sidebar that will follow the user view
+
+
+## License
+
+MIT © Daniel Husar
