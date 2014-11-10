@@ -40,13 +40,13 @@
       $(window).off('scroll.follow')
         .on('scroll.follow', function (e) {
           var scrollY = window.scrollY;
-          if (scrollY < App.follow.settings.start) {
+          if (scrollY < follow.settings.start) {
             follow.settings.$body.removeClass('follow-fixed').removeClass('follow-sticked');
           }
-          if (scrollY > App.follow.settings.start) {
+          if (scrollY > follow.settings.start) {
             follow.settings.$body.addClass('follow-fixed').removeClass('follow-sticked');
           }
-          if (scrollY > App.follow.settings.end) {
+          if (scrollY > follow.settings.end) {
             follow.settings.$body.addClass('follow-sticked');
           }
         });
