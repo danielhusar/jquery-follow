@@ -19,7 +19,7 @@
     // Reset all the stuff that this object has added to dom
     reset: function () {
       follow.settings.$wrapper.css('width', '');
-      follow.settings.$body.removeClass('follow-fixed').removeClass('follow-sticked');
+      follow.settings.$body.removeClass('follow-fixed follow-sticked');
     },
 
     // Calculate banner settings
@@ -41,7 +41,7 @@
         .on('scroll.follow', function (e) {
           var scrollY = window.scrollY;
           if (scrollY < follow.settings.start) {
-            follow.settings.$body.removeClass('follow-fixed').removeClass('follow-sticked');
+            follow.settings.$body.removeClass('follow-fixed follow-sticked');
           }
           if (scrollY > follow.settings.start) {
             follow.settings.$body.addClass('follow-fixed').removeClass('follow-sticked');
